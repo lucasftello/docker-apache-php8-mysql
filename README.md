@@ -1,7 +1,7 @@
 # Apache + PHP 8 + MySQL + phpMyAdmin
 > Ambiente local de desenvolvimento PHP com Docker
 
-Este repositório contém configurações Docker para a montagem de ambiente de desenvolvimento PHP local com Apache, PHP 87, MySQL e phpMyAdmin.
+Este repositório contém configurações Docker para a montagem de ambiente de desenvolvimento PHP local com Apache, PHP 8, MySQL e phpMyAdmin.
 
 **Pré requisitos:** Docker e Docker Compose
 
