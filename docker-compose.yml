@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  web:
+    image: webdevops/php-apache:8.3
+    volumes:
+      - ./www:/app
+    ports:
+      - "80:80" #http
+      - "443:443" #https
+    depends_on:
+      - db
+    links:
+      - db
+
+  db:
+    image: bitnami/mysql
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      MYSQL_ROOT_PASSWORD: root
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "4500:80"
+    links:
+      - db
+  
